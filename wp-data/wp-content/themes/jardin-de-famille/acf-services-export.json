@@ -1,0 +1,60 @@
+[
+    {
+        "key": "group_services_page",
+        "title": "Services - Page d'accueil",
+        "fields": [
+            {
+                "key": "field_services_cards",
+                "label": "Cartes de Services",
+                "name": "services_cards",
+                "type": "repeater",
+                "instructions": "Ajoutez vos services avec icônes SVG, titre et description",
+                "required": 0,
+                "layout": "block",
+                "button_label": "Ajouter un service",
+                "sub_fields": [
+                    {
+                        "key": "field_service_icon",
+                        "label": "Icône SVG",
+                        "name": "service_icon",
+                        "type": "textarea",
+                        "instructions": "Collez le code SVG complet de l'icône (incluant la balise <svg>)",
+                        "required": 1,
+                        "rows": 5
+                    },
+                    {
+                        "key": "field_service_title",
+                        "label": "Titre du service",
+                        "name": "service_title",
+                        "type": "text",
+                        "required": 1,
+                        "maxlength": 50
+                    },
+                    {
+                        "key": "field_service_description",
+                        "label": "Description du service",
+                        "name": "service_description",
+                        "type": "textarea",
+                        "required": 1,
+                        "rows": 3,
+                        "maxlength": 200
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "front_page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label"
+    }
+]

@@ -1,0 +1,384 @@
+[
+    {
+        "key": "group_hero_section",
+        "title": "Section Hero (Accueil)",
+        "fields": [
+            {
+                "key": "field_hero_site_name",
+                "label": "Nom du site (petit texte)",
+                "name": "hero_site_name",
+                "type": "text",
+                "instructions": "Le petit nom affiché en haut (ex: JARDIN DE FAMILLE)",
+                "required": 0,
+                "default_value": "JARDIN DE FAMILLE"
+            },
+            {
+                "key": "field_hero_title",
+                "label": "Titre principal",
+                "name": "hero_title",
+                "type": "text",
+                "instructions": "Le grand titre de la section hero",
+                "required": 1,
+                "default_value": "Entretenons<br>nos <em>racines</em>."
+            },
+            {
+                "key": "field_hero_description",
+                "label": "Description",
+                "name": "hero_description",
+                "type": "textarea",
+                "instructions": "La description sous le titre",
+                "required": 1,
+                "rows": 3,
+                "default_value": "Depuis 1998, nous créons et entretenons des espaces verts d'exception.\nNotre expertise au service de votre environnement naturel."
+            },
+            {
+                "key": "field_hero_button_text",
+                "label": "Texte du bouton",
+                "name": "hero_button_text",
+                "type": "text",
+                "instructions": "Le texte du bouton CTA",
+                "required": 1,
+                "default_value": "Découvrir nos services"
+            },
+            {
+                "key": "field_hero_background_image",
+                "label": "Image de fond",
+                "name": "hero_background_image",
+                "type": "image",
+                "instructions": "Image de fond pour la section hero (recommandé: 1920x1080px minimum)",
+                "required": 0,
+                "return_format": "url",
+                "preview_size": "medium"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "front_page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default"
+    },
+    {
+        "key": "group_services_section",
+        "title": "Section Services",
+        "fields": [
+            {
+                "key": "field_services_title",
+                "label": "Titre de la section",
+                "name": "services_title",
+                "type": "text",
+                "required": 1,
+                "default_value": "Nos Services"
+            },
+            {
+                "key": "field_services_intro_top",
+                "label": "Intro haut",
+                "name": "services_intro_top",
+                "type": "text",
+                "required": 0,
+                "default_value": "POUR DES"
+            },
+            {
+                "key": "field_services_subtitle",
+                "label": "Sous-titre",
+                "name": "services_subtitle",
+                "type": "text",
+                "required": 1,
+                "default_value": "espaces verts"
+            },
+            {
+                "key": "field_services_intro_bottom",
+                "label": "Intro bas",
+                "name": "services_intro_bottom",
+                "type": "text",
+                "required": 0,
+                "default_value": "D'EXCEPTION"
+            },
+            {
+                "key": "field_services_cards",
+                "label": "Services (cartes)",
+                "name": "services_cards",
+                "type": "repeater",
+                "button_label": "Ajouter un service",
+                "sub_fields": [
+                    {
+                        "key": "field_service_icon",
+                        "label": "Icône Font Awesome",
+                        "name": "service_icon",
+                        "type": "text",
+                        "instructions": "Nom de l'icône Font Awesome (ex: fa-scissors, fa-leaf, fa-tree, fa-seedling). Voir https://fontawesome.com/search?o=r&m=free",
+                        "required": 1,
+                        "default_value": "fa-leaf",
+                        "placeholder": "fa-leaf"
+                    },
+                    {
+                        "key": "field_service_title",
+                        "label": "Titre du service",
+                        "name": "service_title",
+                        "type": "text",
+                        "required": 1
+                    },
+                    {
+                        "key": "field_service_description",
+                        "label": "Description",
+                        "name": "service_description",
+                        "type": "textarea",
+                        "required": 1,
+                        "rows": 3
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "front_page"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "normal",
+        "style": "default"
+    },
+    {
+        "key": "group_about_section",
+        "title": "Section À propos",
+        "fields": [
+            {
+                "key": "field_about_intro_small",
+                "label": "Petit texte d'intro",
+                "name": "about_intro_small",
+                "type": "text",
+                "required": 0,
+                "default_value": "NOTRE HISTOIRE"
+            },
+            {
+                "key": "field_about_title",
+                "label": "Titre",
+                "name": "about_title",
+                "type": "text",
+                "required": 1,
+                "default_value": "Notre passion, votre <em>jardin</em>"
+            },
+            {
+                "key": "field_about_text_1",
+                "label": "Premier paragraphe",
+                "name": "about_text_1",
+                "type": "textarea",
+                "required": 1,
+                "rows": 4,
+                "default_value": "Depuis plus de 25 ans, Jardin de Famille cultive l'art du paysage avec passion et expertise.\nNotre équipe de professionnels qualifiés met son savoir-faire au service de la beauté\nde vos espaces verts, dans le respect de l'environnement et de la biodiversité."
+            },
+            {
+                "key": "field_about_text_2",
+                "label": "Deuxième paragraphe",
+                "name": "about_text_2",
+                "type": "textarea",
+                "required": 1,
+                "rows": 4,
+                "default_value": "Chaque projet est unique, chaque jardin raconte une histoire.\nNous vous accompagnons dans la création et l'entretien d'espaces verts qui vous ressemblent,\nalliant esthétique, durabilité et bien-être."
+            },
+            {
+                "key": "field_about_stats",
+                "label": "Statistiques",
+                "name": "about_stats",
+                "type": "repeater",
+                "button_label": "Ajouter une statistique",
+                "sub_fields": [
+                    {
+                        "key": "field_stat_number",
+                        "label": "Nombre",
+                        "name": "stat_number",
+                        "type": "text",
+                        "required": 1
+                    },
+                    {
+                        "key": "field_stat_label",
+                        "label": "Label",
+                        "name": "stat_label",
+                        "type": "text",
+                        "required": 1
+                    },
+                    {
+                        "key": "field_stat_icon_svg",
+                        "label": "Icône SVG",
+                        "name": "stat_icon_svg",
+                        "type": "textarea",
+                        "required": 1,
+                        "rows": 5
+                    }
+                ]
+            },
+            {
+                "key": "field_about_background_image",
+                "label": "Image de fond",
+                "name": "about_background_image",
+                "type": "image",
+                "instructions": "Image de fond pour la section À propos (recommandé: 1920x1080px minimum)",
+                "required": 0,
+                "return_format": "url",
+                "preview_size": "medium"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "front_page"
+                }
+            ]
+        ],
+        "menu_order": 2,
+        "position": "normal",
+        "style": "default"
+    },
+    {
+        "key": "group_gallery_section",
+        "title": "Section Galerie",
+        "fields": [
+            {
+                "key": "field_gallery_title",
+                "label": "Titre",
+                "name": "gallery_title",
+                "type": "text",
+                "required": 1,
+                "default_value": "Nos Réalisations"
+            },
+            {
+                "key": "field_gallery_subtitle",
+                "label": "Sous-titre",
+                "name": "gallery_subtitle",
+                "type": "text",
+                "required": 0,
+                "default_value": "Découvrez quelques-uns de nos projets"
+            },
+            {
+                "key": "field_gallery_images",
+                "label": "Images de la galerie",
+                "name": "gallery_images",
+                "type": "gallery",
+                "instructions": "Sélectionnez ou uploadez les images à afficher dans la galerie (maximum 6 images)",
+                "required": 0,
+                "return_format": "array",
+                "preview_size": "medium",
+                "insert": "append",
+                "library": "all",
+                "min": 0,
+                "max": 6
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "front_page"
+                }
+            ]
+        ],
+        "menu_order": 3,
+        "position": "normal",
+        "style": "default"
+    },
+    {
+        "key": "group_contact_section",
+        "title": "Section Contact",
+        "fields": [
+            {
+                "key": "field_contact_intro_small",
+                "label": "Petit texte d'intro",
+                "name": "contact_intro_small",
+                "type": "text",
+                "required": 0,
+                "default_value": "PRÊT À DÉMARRER ?"
+            },
+            {
+                "key": "field_contact_title",
+                "label": "Titre",
+                "name": "contact_title",
+                "type": "text",
+                "required": 1,
+                "default_value": "Contactez-<em>nous</em>"
+            },
+            {
+                "key": "field_contact_intro_text",
+                "label": "Texte d'introduction",
+                "name": "contact_intro_text",
+                "type": "textarea",
+                "required": 1,
+                "rows": 2,
+                "default_value": "Prêt à transformer votre espace extérieur ?\nParlons de votre projet ensemble."
+            },
+            {
+                "key": "field_contact_phone",
+                "label": "Téléphone",
+                "name": "contact_phone",
+                "type": "text",
+                "required": 1,
+                "default_value": "00 32 498 62 60 40"
+            },
+            {
+                "key": "field_contact_email",
+                "label": "Email",
+                "name": "contact_email",
+                "type": "email",
+                "required": 1,
+                "default_value": "contact@jardindefamille.be"
+            },
+            {
+                "key": "field_contact_website",
+                "label": "Site web",
+                "name": "contact_website",
+                "type": "text",
+                "required": 0,
+                "default_value": "jardindefamille.be"
+            },
+            {
+                "key": "field_contact_location",
+                "label": "Localisation",
+                "name": "contact_location",
+                "type": "text",
+                "required": 0,
+                "default_value": "Belgique"
+            },
+            {
+                "key": "field_contact_button_text",
+                "label": "Texte du bouton d'envoi",
+                "name": "contact_button_text",
+                "type": "text",
+                "required": 1,
+                "default_value": "Envoyer le message"
+            },
+            {
+                "key": "field_contact_form_shortcode",
+                "label": "Shortcode du formulaire Contact Form 7",
+                "name": "contact_form_shortcode",
+                "type": "text",
+                "instructions": "Collez ici le shortcode de votre formulaire Contact Form 7 (ex: [contact-form-7 id=\"e40aa09\" title=\"Formulaire de contact 1\"])",
+                "required": 0,
+                "default_value": "[contact-form-7 id=\"e40aa09\" title=\"Formulaire de contact 1\"]"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "front_page"
+                }
+            ]
+        ],
+        "menu_order": 4,
+        "position": "normal",
+        "style": "default"
+    }
+]

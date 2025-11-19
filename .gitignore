@@ -1,0 +1,52 @@
+# WordPress core files (on ne push pas tout WordPress)
+wp-data/index.php
+wp-data/license.txt
+wp-data/readme.html
+wp-data/wp-activate.php
+wp-data/wp-blog-header.php
+wp-data/wp-comments-post.php
+wp-data/wp-config-sample.php
+wp-data/wp-cron.php
+wp-data/wp-links-opml.php
+wp-data/wp-load.php
+wp-data/wp-login.php
+wp-data/wp-mail.php
+wp-data/wp-settings.php
+wp-data/wp-signup.php
+wp-data/wp-trackback.php
+wp-data/xmlrpc.php
+wp-data/wp-admin/
+wp-data/wp-includes/
+
+# Configuration (contient des mots de passe)
+wp-data/wp-config.php
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+*.log
+
+# Docker volumes
+wp-data/.htaccess
+
+# Fichiers temporaires
+*.swp
+*.swo
+*~
+
+# Node modules (si tu en as)
+node_modules/
+
+# Plugins WordPress par défaut (on garde nos plugins custom)
+wp-data/wp-content/plugins/akismet/
+wp-data/wp-content/plugins/hello.php
+
+# Thèmes par défaut (on garde que le nôtre)
+wp-data/wp-content/themes/twenty*/
+
+# Cache
+wp-data/wp-content/cache/
+wp-data/wp-content/upgrade/
+
+# Uploads - À GARDER pour les images
+# wp-data/wp-content/uploads/
