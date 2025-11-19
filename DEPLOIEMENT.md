@@ -57,16 +57,16 @@ mysql -u DB_USER -p DB_NAME < ~/database-export.sql
 # Se connecter à MySQL
 mysql -u DB_USER -p DB_NAME
 
-# Remplacer les URLs (change TON-DOMAINE.COM)
-UPDATE wp_options SET option_value = 'https://TON-DOMAINE.COM'
+# Remplacer les URLs
+UPDATE wp_options SET option_value = 'https://jardindefamille.be'
   WHERE option_name = 'home' OR option_name = 'siteurl';
 
 # Remplacer dans les posts
-UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost:8082', 'https://TON-DOMAINE.COM');
-UPDATE wp_posts SET guid = REPLACE(guid, 'http://localhost:8082', 'https://TON-DOMAINE.COM');
+UPDATE wp_posts SET post_content = REPLACE(post_content, 'http://localhost:8082', 'https://jardindefamille.be');
+UPDATE wp_posts SET guid = REPLACE(guid, 'http://localhost:8082', 'https://jardindefamille.be');
 
 # Remplacer dans les meta
-UPDATE wp_postmeta SET meta_value = REPLACE(meta_value, 'http://localhost:8082', 'https://TON-DOMAINE.COM');
+UPDATE wp_postmeta SET meta_value = REPLACE(meta_value, 'http://localhost:8082', 'https://jardindefamille.be');
 
 # Quitter MySQL
 EXIT;
@@ -76,7 +76,7 @@ EXIT;
 
 ```bash
 cd /var/www/html
-wp search-replace 'http://localhost:8082' 'https://TON-DOMAINE.COM' --allow-root
+wp search-replace 'http://localhost:8082' 'https://jardindefamille.be' --allow-root
 ```
 
 ### ÉTAPE 5 : Ajuster les permissions
@@ -118,8 +118,8 @@ wp rewrite flush --allow-root
 
 ## ✅ Vérifications post-déploiement
 
-1. **Accéder au site** : `https://TON-DOMAINE.COM`
-2. **Se connecter à l'admin** : `https://TON-DOMAINE.COM/wp-admin`
+1. **Accéder au site** : `https://jardindefamille.be`
+2. **Se connecter à l'admin** : `https://jardindefamille.be/wp-admin`
    - User : (celui de ton local)
    - Pass : (celui de ton local)
 3. **Vérifier** :
@@ -171,7 +171,7 @@ rsync -avz wp-data/wp-content/uploads/ user@serveur:/var/www/html/wp-content/upl
 ssh user@serveur
 mysql -u DB_USER -p DB_NAME < ~/database-export.sql
 cd /var/www/html
-wp search-replace 'http://localhost:8082' 'https://TON-DOMAINE.COM' --allow-root
+wp search-replace 'http://localhost:8082' 'https://jardindefamille.be' --allow-root
 chown -R www-data:www-data wp-content
 wp theme activate jardin-de-famille --allow-root
 wp rewrite flush --allow-root

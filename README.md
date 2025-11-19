@@ -2,6 +2,8 @@
 
 Site WordPress pour Jardin de Famille, spécialisé dans l'entretien et la création d'espaces verts.
 
+**Site web** : https://jardindefamille.be
+
 ## 📋 Contenu du dépôt
 
 - **Thème WordPress** : `wp-data/wp-content/themes/jardin-de-famille/`
