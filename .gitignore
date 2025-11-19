@@ -20,6 +20,7 @@ wp-data/wp-includes/
 
 # Configuration (contient des mots de passe)
 wp-data/wp-config.php
+wp-config-production-REMPLI.php
 
 # Fichiers système
 .DS_Store

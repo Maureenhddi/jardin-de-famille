@@ -1,11 +1,21 @@
 # 🚀 Guide de Déploiement - Jardin de Famille
 
+## 📋 Informations de la base de données
+
+- **Nom de la base** : `jardink764`
+- **Utilisateur** : `jardink764`
+- **Hôte** : `jardink764.mysql.db`
+- **Mot de passe** : (fourni séparément)
+
 ## Fichiers à transférer
 
 ### 1. Base de données
 - `database-export.sql` - Export complet de la base de données
 
-### 2. Fichiers WordPress
+### 2. Configuration
+- `wp-config-production.php` - À renommer en `wp-config.php` sur le serveur
+
+### 3. Fichiers WordPress
 - **Thème** : `wp-data/wp-content/themes/jardin-de-famille/`
 - **Plugins** : `wp-data/wp-content/plugins/`
 - **Uploads** : `wp-data/wp-content/uploads/`
@@ -13,6 +23,16 @@
 ---
 
 ## 📦 Étapes de déploiement via SSH
+
+### ÉTAPE 0 : Préparer wp-config.php
+
+**⚠️ AVANT DE COMMENCER :**
+
+1. Ouvre le fichier `wp-config-production.php`
+2. Remplace `VOTRE_MOT_DE_PASSE` par le vrai mot de passe de la base de données
+3. Va sur https://api.wordpress.org/secret-key/1.1/salt/
+4. Copie-colle les nouvelles clés de sécurité dans le fichier
+5. Sauvegarde le fichier (tu peux le renommer `wp-config-production-REMPLI.php` en local)
 
 ### ÉTAPE 1 : Transférer les fichiers vers le serveur
 
@@ -22,6 +42,9 @@ cd /home/maureen/projets/wordpress-jardin-de-famille
 
 # Transférer la base de données
 scp database-export.sql user@ton-serveur.com:/home/user/
+
+# Transférer le wp-config.php (AVEC LE MOT DE PASSE REMPLI)
+scp wp-config-production.php user@ton-serveur.com:/var/www/html/wp-config.php
 
 # Transférer le thème
 rsync -avz wp-data/wp-content/themes/jardin-de-famille/ \
@@ -45,8 +68,8 @@ ssh user@ton-serveur.com
 ### ÉTAPE 3 : Importer la base de données
 
 ```bash
-# Remplace DB_NAME, DB_USER, DB_PASSWORD par tes vrais identifiants de production
-mysql -u DB_USER -p DB_NAME < ~/database-export.sql
+# Importer la base de données (il te demandera le mot de passe)
+mysql -u jardink764 -p -h jardink764.mysql.db jardink764 < ~/database-export.sql
 ```
 
 ### ÉTAPE 4 : Mettre à jour les URLs dans la base de données
