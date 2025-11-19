@@ -14,6 +14,22 @@ Site WordPress pour Jardin de Famille, spécialisé dans l'entretien et la créa
 
 ## 🚀 Déploiement
 
+### Déploiement automatique (recommandé)
+
+```bash
+./deploy.sh
+```
+
+Le script va :
+1. Vérifier que wp-config.php est configuré
+2. Transférer tous les fichiers vers le serveur
+3. Importer la base de données
+4. Remplacer les URLs
+5. Configurer les permissions
+6. Activer le thème
+
+### Déploiement manuel
+
 Voir le fichier [DEPLOIEMENT.md](DEPLOIEMENT.md) pour les instructions complètes.
 
 ## 🛠️ Technologies
